@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+JP:wght@500;700&family=Poppins:wght@600&family=Ubuntu+Mono&display=swap');
+
+/* Layout for the presentation */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24rem;
+    height: 100vh;
+    background-color: #FAFBFD;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+}
+
+.navbar h2 {
+    position: absolute;
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    top: 5rem;
+}
+
+.navbar h2 span {
+    color: #F7542E;
+}
+
+.navbar li {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.4rem;
+    color: #9E9E9E;
+    line-height: 2;
+    list-style-type: none;
+    margin: 2rem;
+    margin-left: -1rem;
+    cursor: pointer;
+}
+
+.navbar li.active {
+    color: #090F31;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 24rem;
+    padding: 5rem;
+    overflow: scroll;
+    height: 80vh;
+    max-width: 90rem;
+}
+
+.container h1 {
+    display: inline-flex;
+    margin: 2rem;
+    margin-left: 0;
+    color: #4F4F4F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    left: 0;
+    
+}
+
+.description{
+    font-family: 'Ubuntu Mono', sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.block,
+.block .line{
+    display: inline-block;
+    margin: 3rem;
+    margin-left: 0;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 2rem;
+    left: 24rem;
+    padding: 2rem;
+}
+
+.att {
+    font-family: 'Ubuntu Mono', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    color: #828282;
+    margin: 2rem 0;
+}
+
+.att-name {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #A9A9A9;
+}
+
+/* Reusable button components */
+
+.btn {
+    background-color: #E0E0E0;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    cursor: pointer;
+    width: 90px;
+    height: 36px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    color: #000;
+    height: 36px;
+    width: 81px;
+}
+
+.btn:hover,
+.btn:focus {
+    outline: none;
+    background-color: #aeaeae;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-outline {
+    color: #3D5AFE;
+    border: 1px solid #3D5AFE;
+    background-color: transparent;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+    background: rgba(41, 98, 255, 0.1);
+}
+
+.btn-text {
+    color: #3D5AFE;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.btn-text:hover,
+.btn-text:focus {
+    background: rgba(41, 98, 255, 0.1);
+}
+
+.btn-disableShadow,
+.btn-disableShadow:focus,
+.btn-disableShadow:hover {
+    color: #fff;
+    background-color: #3D5AFE;
+    border: none;
+    box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
+}
+
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:focus {
+    color: #9E9E9E;
+    background-color: #e0e0e0;
+    border: none;
+    box-shadow: none;
+    transform: scale(1);
+    cursor: not-allowed;
+}
+
+.btn-disabled-text,
+.btn-disabled-text:hover,
+.btn-disabled-text:focus {
+    color: #9E9E9E;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    cursor: not-allowed;
+    margin: 0;
+    transform: scale(1);
+}
+
+.btn-startIcon,
+.btn-endIcon,
+.btn-startIcon:hover,
+.btn-startIcon:focus,
+.btn-endIcon:hover,
+.btn-endIcon:focus {
+    color: #fff;
+    background-color: #2962FF;
+    border: none;
+    box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
+    width: 105px;
+}
+
+.btn-startIcon::before {
+    font-family: "Material Icons";
+    content: "add_shopping_cart";
+    padding: 0 5px;
+}
+
+.btn-endIcon::after {
+    font-family: "Material Icons";
+    content: "add_shopping_cart";
+    padding: 0 5px;
+}
+
+/*
+*
+* This style is only to show it in StyleGuide however, as long as you type any of the variants, it should work on any button  */
+.btn.sm.guide,
+.btn.md.guide,
+.btn.lg.guide {
+    border: none;
+    background: #2962FF;
+    box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
+    color: #fff;
+}
+
+/*** ----  ***/
+
+.btn.sm {
+    width: 73px;
+    height: 32px;
+}
+
+.btn.md {
+    width: 81px;
+    height: 36px;
+}
+
+.btn.lg {
+    width: 93px;
+    height: 42px;
+}
+
+.btn-primary {
+    border: none;
+    background: #2962FF;
+    box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    border: none;
+    background: #0039CB;
+    box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);
+    color: #fff;
+}
+
+.btn-secondary {
+    border: none;
+    background: #455A64;
+    box-shadow: 0px 2px 3px rgba(69, 90, 100, 0.2);
+    color: #fff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    border: none;
+    background: #1C313A;
+    box-shadow: 0px 2px 3px rgba(69, 90, 100, 0.2);
+    color: #fff;
+}
+
+.btn-danger {
+    border: none;
+    background: #D32F2F;
+    box-shadow: 0px 2px 3px rgba(211, 47, 47, 0.2);
+    color: #fff;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    border: none;
+    background: #9A0007;
+    box-shadow: 0px 2px 3px rgba(211, 47, 47, 0.2);
+    color: #fff;
+}
